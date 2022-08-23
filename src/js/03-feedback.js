@@ -4,8 +4,8 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 const textarea = document.querySelector('textarea')
 
-textarea.addEventListener('input', throttle(onTextareaInput, 500))
-input.addEventListener('input', throttle(onTextareaInput, 500))
+form.addEventListener('input', throttle(onTextareaInput, 500))
+// input.addEventListener('input', throttle(onTextareaInput, 500))
 form.addEventListener('submit', onFormSubmit)
 
 const LOCAL_KEY = 'feedback-form-state';
